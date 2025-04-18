@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Contador {
 
-    public static void main(String[] args) throws ParametroInvalidoException {
+    public static void main(String[] args)  {
         Scanner terminal = new Scanner(System.in);
         System.out.println("Digite o primeiro parâmetro: ");
         int parametroUm = terminal.nextInt();
@@ -13,8 +13,8 @@ public class Contador {
 
         try {
             contar(parametroUm, parametroDois);
-        } catch (ParametroInvalidoException exception) {
-            throw new ParametroInvalidoException();
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
         }
     }
 
